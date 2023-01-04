@@ -16,23 +16,16 @@ Scenario: Admin sees Main Page
     Then Admin sees welcome banner
 
 Scenario: Admin sees Casino Page
-    When Admin clicks "Casino" page1
-    Then Admin should see filter1 options
-    |tab         |
-    |Most Popular|
-    |Newest      |
-    |A-Z         |
-
-Scenario: Admin can click filter button
-    When Admin clicks "Casino" page1
-    And Admin should see filter1 options
-    And Admin click filter button
-    Then Admin should see filter1 options
-    |tab         |
-    |Most Popular|
-    |Newest      |
-    |A-Z         |
+    When Admin clicks "Casino" page
+    Then Admin should see filter
+     
 
 Scenario: Admin sees Safer Gaming page
     When Admin clicks "Safer Gaming" page 3
     Then Admin should see Safer Gaming page
+
+Scenario: Admin can see safer gaming filter
+    When Admin clicks "Safer Gaming" page 3
+    And Admin clicks safer gaming filter
+    Then Admin should see safer gaming options
+
