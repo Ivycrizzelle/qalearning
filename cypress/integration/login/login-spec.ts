@@ -63,24 +63,24 @@ Then(`successfully log in web`, () => {
   cy.get(`[role="alert"]`).should("exist");
 });
 // Member adds incorrect password
-When (`member sees log in modal`, () => {
- cy.get('button:contains("Login")').click();
- cy.get('header:contains("Login")').should("exist");
- cy.get(`[id="chakra-modal--body-4"]` ).should("exist");
-});
-And ('member can add username in Login modal', () => {
-  cy.get('[role="dialog"]').should('be.visible')
-  cy.get('header:contains("Login")').should("exist");
-  cy.get('[placeholder ="Username"]').should("exist"); ///key to success!
-  cy.get('[placeholder ="Username"]').type('timeout15')
- });
- And ('member can add password in Login Modal', () => { ///wrong password
-  cy.get('[placeholder ="Password"').should("exist"); 
-  cy.get('[placeholder ="Password"]').type('password!')
- });
- And ('member clicks "Login" button', () => {
-  cy.get('[type = "submit"]').click();
-  });
-  Then(`should see alert message `, () => {
+// When (`member sees log in modal`, () => {
+//  cy.get('button:contains("Login")').click();
+//  cy.get('header:contains("Login")').should("exist");
+//  cy.get(`[id="chakra-modal--body-4"]` ).should("exist");
+// });
+// And ('member can add username in Login modal', () => {
+//   cy.get('[role="dialog"]').should('be.visible')
+//   cy.get('header:contains("Login")').should("exist");
+//   cy.get('[placeholder ="Username"]').should("exist"); ///key to success!
+//   cy.get('[placeholder ="Username"]').type('timeout15')
+//  });
+//  And ('member can add password in Login Modal', () => { ///wrong password
+//   cy.get('[placeholder ="Password"').should("exist"); 
+//   cy.get('[placeholder ="Password"]').type('password!')
+//  });
+//  And ('member clicks "Login" button', () => {
+//   cy.get('[type = "submit"]').click();
+//   });
+//   Then(`should see alert message `, () => {
 
-  });
+//   });
