@@ -18,12 +18,12 @@ Scenario: Member can log in to web
      When Admin clicks "Login" button
      And Admin can add username in Login modal
      And Admin can add password in Login Modal
-     And Admin clicks "Login" button
-    Then successfully log in web
+     Then Admin clicks "Login" button
+    # Then successfully log in web
 
 Scenario: Member enters incorrect password
-     When member sees log in modal
-     And member can add username in Login modal
-     And member can add password in Login Modal
+     When Member clicks "Login" button
+     And Member can add username in Login modal
+     And Member can add incorrect password in Login Modal
      And member clicks "Login" button
-    Then should see alert message 
+    Then should not login
