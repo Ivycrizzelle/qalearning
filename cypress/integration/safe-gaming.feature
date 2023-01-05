@@ -29,3 +29,8 @@ Scenario: Admin can see safer gaming filter
     And Admin clicks safer gaming filter
     Then Admin should see safer gaming options
 
+# Scenario: Admin can select "understanding gambling" option
+#     When Admin clicks "Safer Gaming" page 
+#     And Admin clicks safer gaming filter
+#     And Admin can clicks "Understading gambling" option
+    

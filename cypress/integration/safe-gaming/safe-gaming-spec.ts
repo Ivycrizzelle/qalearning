@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { Given, When, Then, } from "cypress-cucumber-preprocessor/steps";
+import { Given, When, Then, And} from "cypress-cucumber-preprocessor/steps";
 
 
 before(() => {
@@ -69,21 +69,21 @@ Then(`Admin should see Safer Gaming page`, () => {
 
 // Admin can see safer gaming filter
 
-// When(`Admin clicks "Safer Gaming" page 3`, (str: string)=> { cy.get(
-//   `[src="https://static.nexiux.io/images/@sites/@commons/images/logo/betvision.png"]`
-// ).should("exist");
-// cy.get(`:nth-child(5) > li > .chakra-text`, { timeout: 20000 })
-//   .contains(str)
-//   .click()
-// });
-// And(`Admin clicks safer gaming filter`, ()=> 
-// {cy.get(`[id="menu-button-15"]`).should("exist")
-// cy.get(`[id="menu-button-15"]`).click()
-// }); 
-// Then(`Admin should see safer gaming options`, (
-// )=> {cy.get(`[role="menu"]`).should("exist")});
+When(`Admin clicks "Safer Gaming" page`, (str: string)=> { cy.get(
+  `[src="https://static.nexiux.io/images/@sites/@commons/images/logo/betvision.png"]`
+).should("exist");
+cy.get(`:nth-child(5) > li > .chakra-text`, { timeout: 20000 })
+  .contains(str)
+  .click()
+});
+And(`Admin clicks safer gaming filter`, ()=> 
+{cy.get(`[id="menu-button-15"]`).should("exist")
+cy.get(`[id="menu-button-15"]`).click()
+}); 
+Then(`Admin should see safer gaming options`, (
+)=> {cy.get(`[role="menu"]`).should("exist")});
 
-// //Admin can select "understanding gambling" option
+//Admin can select "understanding gambling" option
 // When(`Admin clicks "Safer Gaming" page 3`, (str: string)=> { cy.get(
 //   `[src="https://static.nexiux.io/images/@sites/@commons/images/logo/betvision.png"]`
 // ).should("exist");
@@ -95,12 +95,9 @@ Then(`Admin should see Safer Gaming page`, () => {
 // {cy.get(`[id="menu-button-15"]`).should("exist")
 // cy.get(`[id="menu-button-15"]`).click()
 // });
-// And(`Admin clicks "Understading gambling" option`, ()=> {
+// Then(`Admin can clicks "Understading gambling" option`, ()=> {
 //   cy.get(`[id="menu-button-15"]`).click()
-
-//  cy.get('[class="chakra-text css-0"], "Understading gambling"').click()
+//   cy.get('button#menu-list-3-menuitem-5 > p').click()
 //   // cy.get('[#menu-list-15"]').should("exist").select("Understading gambling")
  
-// }
-
-// );
+// });
